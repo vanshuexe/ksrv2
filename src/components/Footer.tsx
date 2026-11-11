@@ -22,8 +22,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegalPage }) =
           <div className="md:col-span-6 lg:col-span-5">
             <img
               src={logo}
-              alt="KSR GROUPS Industrial and Agro"
-              className="w-64 h-auto mb-4"
+              alt="KSR winged logo"
+              className="h-16 sm:h-20 w-auto object-contain mb-4"
             />
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm mb-5">
@@ -38,13 +38,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegalPage }) =
               >
                 {SITE_METADATA.email}
               </a>
-              <a
-                href={`tel:${SITE_METADATA.phone.replace(/\s+/g, '')}`}
-                className="inline-flex items-center gap-1.5 text-slate-300 hover:text-[#c59b4e] transition-colors"
-              >
-                <Phone className="h-3 w-3 text-[#c59b4e]" />
-                {SITE_METADATA.phone}
-              </a>
+              {SITE_METADATA.phones.map((phone) => (
+                <a
+                  key={phone.tel}
+                  href={`tel:${phone.tel}`}
+                  className="inline-flex items-center gap-1.5 text-slate-300 hover:text-[#c59b4e] transition-colors"
+                >
+                  <Phone className="h-3 w-3 text-[#c59b4e]" />
+                  {phone.display}
+                </a>
+              ))}
             </div>
           </div>
 

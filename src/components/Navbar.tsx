@@ -55,8 +55,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <img
                 src={ksrGroupsLogo}
-                alt="KSR GROUPS — Industrial and Agro"
-                className="w-40 sm:w-52 h-auto object-contain"
+                alt="KSR winged logo"
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </div>
 

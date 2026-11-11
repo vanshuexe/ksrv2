@@ -91,19 +91,29 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-1 flex items-center justify-between">
                   <span>PHONE</span>
                   <button
-                    onClick={() => copyContact(SITE_METADATA.phone, 'Phone number')}
+                    onClick={() =>
+                      copyContact(
+                        SITE_METADATA.phones.map((phone) => phone.display).join(', '),
+                        'Phone numbers'
+                      )
+                    }
                     className="text-slate-400 hover:text-slate-700 cursor-pointer"
-                    title="Copy phone"
+                    title="Copy phone numbers"
                   >
                     <Copy className="w-3 h-3" />
                   </button>
                 </div>
-                <a
-                  href={`tel:${SITE_METADATA.phone.replace(/\s+/g, '')}`}
-                  className="text-sm font-semibold text-slate-800 hover:text-[#c59b4e] transition-colors block"
-                >
-                  {SITE_METADATA.phoneDisplay}
-                </a>
+                <div className="space-y-1">
+                  {SITE_METADATA.phones.map((phone) => (
+                    <a
+                      key={phone.tel}
+                      href={`tel:${phone.tel}`}
+                      className="text-sm font-semibold text-slate-800 hover:text-[#c59b4e] transition-colors block"
+                    >
+                      {phone.display}
+                    </a>
+                  ))}
+                </div>
               </div>
 
               {/* Email */}
@@ -127,6 +137,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               </div>
 
               {/* Office Address */}
+              <div>
+                <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-1">
+                  GSTIN
+                </div>
+                <div className="text-sm text-slate-600 font-normal">
+                  {SITE_METADATA.gstin}
+                </div>
+              </div>
+
               <div>
                 <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-1">
                   OFFICE ADDRESS

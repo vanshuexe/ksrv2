@@ -53,39 +53,44 @@ export const AgroPortfolio: React.FC<AgroPortfolioProps> = ({ onSelectProduct })
           </div>
         </div>
 
-        {/* 10 Product Cards Grid - exactly 5 per row on desktop matching screenshot */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {filteredProducts.map((product) => (
-            <div
+            <button
+              type="button"
               key={product.id}
               onClick={() => onSelectProduct(product)}
-              className="bg-[#151515] rounded-xl p-5 border border-neutral-700 shadow-2xs hover:border-neutral-500 hover:shadow-xs transition-all duration-150 flex flex-col justify-between group cursor-pointer min-h-[140px]"
+              className="overflow-hidden rounded-xl border border-neutral-700 bg-[#151515] text-left shadow-2xs transition-all duration-150 hover:border-neutral-500 hover:shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c59b4e] group cursor-pointer"
             >
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <img
-                      src={product.icon}
-                      alt=""
-                      aria-hidden="true"
-                      className="w-9 h-9 object-contain shrink-0"
-                    />
-                    <h3 className="font-extrabold text-white text-sm tracking-tight group-hover:text-neutral-200 transition-colors">
-                      {product.name}
-                    </h3>
-                  </div>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-neutral-200 shrink-0 transition-colors" />
-                </div>
-                <p className="text-xs text-neutral-300 leading-relaxed font-normal">
-                  {product.description}
-                </p>
+              <div className="relative h-36 overflow-hidden bg-neutral-800">
+                <img
+                  src={product.image}
+                  alt={product.imageAlt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  style={{ objectPosition: product.imagePosition ?? 'center' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
               </div>
 
-              <div className="pt-3 mt-3 border-t border-neutral-700 flex items-center justify-between text-[10px] text-neutral-400">
-                <span className="uppercase tracking-wider font-semibold">Product category</span>
-                <span className="text-[#c59b4e] group-hover:underline font-bold">Enquire</span>
+              <div className="flex min-h-[140px] flex-col justify-between p-4">
+                <div>
+                  <div className="mb-2 flex items-center justify-between gap-2">
+                    <h3 className="font-extrabold text-sm tracking-tight text-white transition-colors group-hover:text-neutral-200">
+                      {product.name}
+                    </h3>
+                    <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-neutral-500 transition-colors group-hover:text-neutral-200" />
+                  </div>
+                  <p className="text-xs font-normal leading-relaxed text-neutral-300">
+                    {product.description}
+                  </p>
+                </div>
+
+                <div className="mt-3 flex items-center justify-between border-t border-neutral-700 pt-3 text-[10px] text-neutral-400">
+                  <span className="font-semibold uppercase tracking-wider">Product category</span>
+                  <span className="font-bold text-[#c59b4e] group-hover:underline">Enquire</span>
+                </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

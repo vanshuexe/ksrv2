@@ -9,6 +9,16 @@ import gingerIcon from '../assets/images/products/ginger.png';
 import spicesIcon from '../assets/images/products/spices.png';
 import cerealsIcon from '../assets/images/products/cereals.png';
 import coldPressedOilsIcon from '../assets/images/products/cold-pressed-oils.png';
+import ricePhoto from '../assets/images/products/rice-photo.jpg';
+import pulsesPhoto from '../assets/images/products/pulses-photo.jpg';
+import milletsPhoto from '../assets/images/products/millets-photo.jpg';
+import chilliPhoto from '../assets/images/products/chilli-photo.jpg';
+import turmericPhoto from '../assets/images/products/turmeric-photo.jpg';
+import gingerPhoto from '../assets/images/products/ginger-photo.jpg';
+import spicesPhoto from '../assets/images/products/spices-photo.jpg';
+import cerealsPhoto from '../assets/images/products/cereals-photo.jpg';
+import coldPressedOilPhoto from '../assets/images/products/cold-pressed-oil-photo.jpg';
+import maizePhoto from '../assets/images/products/maize-photo.jpg';
 
 export const SITE_METADATA = {
   companyName: 'KSR GROUPS',
@@ -16,12 +26,16 @@ export const SITE_METADATA = {
   subtitle: 'Connecting resources, expertise and opportunities across multiple business sectors.',
   heroDescription:
     'KSR Groups is a diversified business group with interests across real estate, civil works and infrastructure, organic agriculture, agro-processing, commodity trading, export and import, poultry feed supply and industrial development. We aim to connect local resources with business opportunities, develop value-added products and support sustainable growth across the sectors in which we operate.',
-  email: 'info@ksrgroups.com',
-  phone: '+91 73969 77018',
-  phoneDisplay: '+91 73969 77018',
-  emailDisplay: 'info@ksrgroups.com',
-  website: 'www.ksrgroups.com',
-  officeAddress: 'Corporate Office Address to be confirmed',
+  email: 'ksrgroupsofficial@gmail.com',
+  phones: [
+    { display: '99897 77631', tel: '+919989777631' },
+    { display: '88853 74262', tel: '+918885374262' },
+  ],
+  emailDisplay: 'ksrgroupsofficial@gmail.com',
+  website: 'www.ksrgroups.org',
+  gstin: '36ADVFS4296E1ZE',
+  officeAddress:
+    '#33, Beside AMRC, Main Road, RL Nagar, Keesara Mandal, Medchal District, Hyderabad, Telangana - 501301',
 };
 
 export const PURPOSE_VISION_MISSION = [
@@ -105,6 +119,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Rice & Rice Products',
     description: 'Rice processing and rice products',
     icon: riceProductsIcon,
+    image: ricePhoto,
+    imageAlt: 'Uncooked white rice grains',
     category: 'grain',
     specPreview: 'Raw, parboiled and broken rice products; grades and specifications can be discussed on enquiry.',
   },
@@ -113,6 +129,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Pulses',
     description: 'Processing and trading of different pulses',
     icon: pulsesIcon,
+    image: pulsesPhoto,
+    imageAlt: 'Yellow split pulses',
     category: 'pulse',
     specPreview: 'Red gram, green gram, black gram and other pulse varieties.',
   },
@@ -121,6 +139,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Millets',
     description: 'Millet cleaning, processing and value-added products',
     icon: milletsIcon,
+    image: milletsPhoto,
+    imageAlt: 'Pearl millet plants growing in a field',
     category: 'grain',
     specPreview: 'Finger millet (Ragi), Foxtail, Pearl millet (Bajra), Sorghum (Jowar)',
   },
@@ -129,6 +149,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Maize',
     description: 'Maize sourcing, processing and trading',
     icon: maizeIcon,
+    image: maizePhoto,
+    imageAlt: 'Maize plants growing in a field',
     category: 'grain',
     specPreview: 'Maize for food, feed and other processing enquiries.',
   },
@@ -137,6 +159,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Chilli & Chilli Powder',
     description: 'Chilli and chilli powder',
     icon: chilliIcon,
+    image: chilliPhoto,
+    imageAlt: 'Dried red chillies and spices',
     category: 'spice',
     specPreview: 'Product forms, grades and specifications can be discussed on enquiry.',
   },
@@ -145,6 +169,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Turmeric',
     description: 'Turmeric in whole and processed forms',
     icon: turmericIcon,
+    image: turmericPhoto,
+    imageAlt: 'Ground turmeric with fresh turmeric roots',
     category: 'spice',
     specPreview: 'Product forms and specifications can be discussed on enquiry.',
   },
@@ -153,6 +179,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Ginger',
     description: 'Ginger and other agricultural products',
     icon: gingerIcon,
+    image: gingerPhoto,
+    imageAlt: 'Fresh ginger root',
     category: 'spice',
     specPreview: 'Product forms and specifications can be discussed on enquiry.',
   },
@@ -161,6 +189,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Spices',
     description: 'Spices including chilli, turmeric, ginger and others',
     icon: spicesIcon,
+    image: spicesPhoto,
+    imageAlt: 'Assorted spices arranged in bowls',
     category: 'spice',
     specPreview: 'Product forms, grades and specifications can be discussed on enquiry.',
   },
@@ -169,6 +199,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Cereals',
     description: 'Processing and trading of different cereal grains',
     icon: cerealsIcon,
+    image: cerealsPhoto,
+    imageAlt: 'Assorted cereal grains at a market',
     category: 'grain',
     specPreview: 'Cereal products and specifications can be discussed on enquiry.',
   },
@@ -177,6 +209,8 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     name: 'Cold-Pressed Oils',
     description: 'Oil production from suitable oilseeds and related by-products',
     icon: coldPressedOilsIcon,
+    image: coldPressedOilPhoto,
+    imageAlt: 'Bottle of golden olive oil',
     category: 'oil',
     specPreview: 'Oilseed options, production and product details can be discussed on enquiry.',
   },
