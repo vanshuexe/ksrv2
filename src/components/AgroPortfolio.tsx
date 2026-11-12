@@ -8,7 +8,9 @@ interface AgroPortfolioProps {
 }
 
 export const AgroPortfolio: React.FC<AgroPortfolioProps> = ({ onSelectProduct }) => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'grain' | 'spice' | 'pulse' | 'oil'>('all');
+  const [activeFilter, setActiveFilter] = useState<
+    'all' | 'grain' | 'spice' | 'pulse' | 'oil' | 'black-garlic'
+  >('all');
 
   const filteredProducts =
     activeFilter === 'all'
@@ -37,6 +39,7 @@ export const AgroPortfolio: React.FC<AgroPortfolioProps> = ({ onSelectProduct })
               { id: 'spice', label: 'Spices' },
               { id: 'pulse', label: 'Pulses' },
               { id: 'oil', label: 'Oils' },
+              { id: 'black-garlic', label: 'Black Garlic' },
             ].map((tab) => (
               <button
                 key={tab.id}

@@ -19,6 +19,7 @@ import spicesPhoto from '../assets/images/products/spices-photo.jpg';
 import cerealsPhoto from '../assets/images/products/cereals-photo.jpg';
 import coldPressedOilPhoto from '../assets/images/products/cold-pressed-oil-photo.jpg';
 import maizePhoto from '../assets/images/products/maize-photo.jpg';
+import blackGarlicPhoto from '../assets/images/products/black-garlic-photo.png';
 
 export const SITE_METADATA = {
   companyName: 'KSR GROUPS',
@@ -213,6 +214,16 @@ export const AGRO_PRODUCTS: AgroProduct[] = [
     imageAlt: 'Bottle of golden olive oil',
     category: 'oil',
     specPreview: 'Oilseed options, production and product details can be discussed on enquiry.',
+  },
+  {
+    id: 'black-garlic',
+    name: 'Black Garlic',
+    description: 'Black garlic agro-processing and product development',
+    icon: blackGarlicPhoto,
+    image: blackGarlicPhoto,
+    imageAlt: 'Whole and sliced black garlic bulbs and cloves',
+    category: 'black-garlic',
+    specPreview: 'Processing scope, product forms and availability can be discussed on enquiry.',
   },
 ];
 

@@ -14,7 +14,7 @@ export interface AgroProduct {
   image: string;
   imageAlt: string;
   imagePosition?: string;
-  category: 'grain' | 'pulse' | 'spice' | 'oil' | 'general';
+  category: 'grain' | 'pulse' | 'spice' | 'oil' | 'black-garlic' | 'general';
   specPreview?: string;
 }
 
